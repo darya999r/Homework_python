@@ -18,11 +18,17 @@ def polynom(arr, n):
         while n!=1:
             if arr[0]==0:
                 poly1 = [arr[1],'*','x']
-            if arr[1]==0:
+                poly2 = [arr[n], '*', 'x', '^', n, '+']
+                poly3 = poly3 + poly2
+            elif arr[1]==0:
                 poly1 = ['+',arr[0]]
-            if arr[n]==0:
+                poly2 = [arr[n], '*', 'x', '^', n, '+']
+                poly3 = poly3 + poly2
+            elif arr[n]==0:
+                poly1 = [arr[1],'*','x','+',arr[0]]
                 poly2 = []
-            if arr[n]!=0:
+                poly3 = poly3 + poly2
+            elif arr[n]!=0:
                 poly1 = [arr[1],'*','x','+',arr[0]]
                 poly2 = [arr[n], '*', 'x', '^', n, '+']
                 poly3 = poly3 + poly2
