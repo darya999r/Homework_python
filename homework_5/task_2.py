@@ -33,9 +33,19 @@ def compression_data (data):
         data_result += str(counter) + single_element
         return data_result
     
-
+def recovery_data (data):
+    data_result = ''
+    counter = ''
+    for elem in data:
+        if elem.isdigit():
+            counter += elem
+        else:
+            data_result += elem*int(counter)
+            counter = ''
+    return data_result
 
 try:
+    # чтение, сжатие и запись данных в другой файл:
     f_name_1 = 'file_1_task2.txt'
     data_1 = read_file(f_name_1)
     print()
@@ -44,6 +54,15 @@ try:
     print(data_2)
     f_name_2 = 'file_2_task2.txt'
     write_file (f_name_2, data_2)
+    # чтение, восстановление и запись данных в следующий файл:
+    print()
+    data_3 = read_file(f_name_2)
+    print()
+    data_4 = recovery_data (data_3)
+    print("Recovery data: ")
+    print(data_4)
+    f_name_3 = 'file_3_task2.txt'
+    write_file (f_name_3, data_4)
 except: print("The file is empty!")
 
 
