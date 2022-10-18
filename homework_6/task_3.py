@@ -27,3 +27,22 @@
 # Спартак:2 0 0 2 0
 # Зенит:2 1 0 1 3
 # Локомотив:2 2 0 0 6
+
+def enter ():
+    nn = int(input("Enter number games: "))
+    list_g = []
+    game_n = []
+    while i<=nn:
+        for i in range(len(list_g)):
+            game_n = list_g[i]
+            while nn!=0:
+                game_n.append(input("Enter the name of the first team: "))
+                game_n.append(int(input("Enter the number of goals scored: ")))
+                game_n.append(input("Enter the name of the second team: "))
+                game_n.append(int(input("Enter the number of goals scored: ")))
+                nn -= 1
+    return list_g
+
+
+list_games = enter()
+print(list_games)
