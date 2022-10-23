@@ -99,6 +99,7 @@ def info_commands(nn, list_2):
             point_1 += 1
             draw_2 += 1
             point_2 += 1
+
         if list_2[1][1]>list_2[1][3]:
             if list_2[1][0]==com_3 and list_2[1][2]==com_1:
                 champ_3 += 1
@@ -165,6 +166,7 @@ def info_commands(nn, list_2):
                 point_1 += 1
                 draw_2 += 1
                 point_2 += 1
+
         if list_2[2][1]>list_2[2][3]:
             if list_2[2][0]==com_3 and list_2[2][2]==com_1:
                 champ_3 += 1
@@ -249,9 +251,9 @@ def info_commands(nn, list_2):
 def print_tabl_games(tabl_1):
     print()
     print("Command:         Games:  Vict.:  Draw:   Loss:   Points:")
-    elem_1 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[0][0],tabl_1[0][1],tabl_1[0][2],tabl_1[0][3],tabl_1[0][4],tabl_1[0][4])
-    elem_2 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[1][0],tabl_1[1][1],tabl_1[1][2],tabl_1[1][3],tabl_1[1][4],tabl_1[1][4])
-    elem_3 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[2][0],tabl_1[2][1],tabl_1[2][2],tabl_1[2][3],tabl_1[2][4],tabl_1[2][4])
+    elem_1 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[0][0],tabl_1[0][1],tabl_1[0][2],tabl_1[0][3],tabl_1[0][4],tabl_1[0][5])
+    elem_2 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[1][0],tabl_1[1][1],tabl_1[1][2],tabl_1[1][3],tabl_1[1][4],tabl_1[1][5])
+    elem_3 = '{:<15} {:^7} {:^7} {:^7} {:^7} {:^7} '.format(tabl_1[2][0],tabl_1[2][1],tabl_1[2][2],tabl_1[2][3],tabl_1[2][4],tabl_1[2][5])
     print('{}\n{}\n{}\n'.format(elem_1,elem_2,elem_3))      
 
 try:
