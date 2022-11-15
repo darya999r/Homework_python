@@ -46,8 +46,8 @@ def startMessage(message):
 def menu(message):
     if message.chat.type == 'private':
         if message.text == "Посмотреть все контакты":
-            bot.send_message(chat_id=message.chat.id, text="Вот все твои сохранённые контакты:")
-            bot.send_message(message.chat.id, f'{phone_book}')
+            for key in phone_book:
+                bot.send_message(message.chat.id, f"{key}: {str(phone_book[key]).replace('[', '').replace(']', '')}")
         elif message.text == "Найти контакт":
             markup_1 = types.InlineKeyboardMarkup(row_width=1)
             but1 = types.InlineKeyboardButton("Найти по фамилии", callback_data='text1')
